@@ -111,11 +111,9 @@ static void CallInjector(JNIEnv* jni_env, jclass injector_class,
 
   jni_env->CallStaticVoidMethod(
       injector_class, inject_method_id, jar_classes_array);
-  ShowMessage(L"Native part ready, now java part is injecting");
 }
 
 void RunInjector() {
-  ShowMessage(L"Starting");
 
   const auto jvm = GetJVM();
 
